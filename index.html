@@ -1,16 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="./src/output.css" rel="stylesheet">
-</head>
-<body>
+    <link href="./src/output.css" rel="stylesheet" />
+  </head>
+  <body>
     <!-- NavBar Section -->
-     <section class="flex justify-between p-5 bg-black">
-        <div class="text-red-600 text-center">Some Text</div>
-        <div class="text-emerald-500">Some Text</div>
-     </section>
-</body>
+    <section class="fixed top-0 left-0 w-full z-50 bg-gray-100" id="navbar">
+      <div class="flex justify-between p-4 items-center max-w-7xl mx-auto transition-shadow duration-300">
+        <p class="text-center text-2xl font-semibold text-sky-500">SOW</p>
+  
+        <!-- Desktop Navigation Links (visible on medium and larger screens) -->
+        <div class="hidden md:flex gap-x-6">
+          <p class="hover:text-sky-500 hover:bg-slate-200 hover:rounded-md cursor-pointer px-4 py-2">Home</p>
+          <p class="hover:text-sky-500 hover:bg-slate-200 hover:rounded-md cursor-pointer px-4 py-2">About</p>
+          <p class="hover:text-sky-500 hover:bg-slate-200 hover:rounded-md cursor-pointer px-4 py-2">Skills</p>
+          <p class="hover:text-sky-500 hover:bg-slate-200 hover:rounded-md cursor-pointer px-4 py-2">Projects</p>
+          <p class="hover:text-sky-500 hover:bg-slate-200 hover:rounded-md cursor-pointer px-4 py-2">Experience</p>
+          <p class="hover:text-sky-500 hover:bg-slate-200 hover:rounded-md cursor-pointer px-4 py-2">Education</p>
+          <p class="hover:text-sky-500 hover:bg-slate-200 hover:rounded-md cursor-pointer px-4 py-2">Contact</p>
+        </div>
+  
+        <div class="md:hidden flex items-center" id="hamburger-menu">
+          <button class="text-sky-500" onclick="toggleMenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+  
+    <div id="mobile-nav" class="hidden bg-slate-50 w-full px-6 py-16 transition-transform transform -translate-x-full duration-300 ease-in-out">
+      <p class="hover:text-sky-500 hover:bg-slate-200 hover:rounded-md cursor-pointer py-2">Home</p>
+      <p class="hover:text-sky-500 hover:bg-slate-200 hover:rounded-md cursor-pointer py-2">About</p>
+      <p class="hover:text-sky-500 hover:bg-slate-200 hover:rounded-md cursor-pointer py-2">Skills</p>
+      <p class="hover:text-sky-500 hover:bg-slate-200 hover:rounded-md cursor-pointer py-2">Projects</p>
+      <p class="hover:text-sky-500 hover:bg-slate-200 hover:rounded-md cursor-pointer py-2">Experience</p>
+      <p class="hover:text-sky-500 hover:bg-slate-200 hover:rounded-md cursor-pointer py-2">Education</p>
+      <p class="hover:text-sky-500 hover:bg-slate-200 hover:rounded-md cursor-pointer py-2">Contact</p>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="h-screen max-w-7xl mx-auto pt-20 text-red-950 z-100">
+      <div>
+        <h1>Sowndharyan Sathish</h1>
+        <p>Software Engineer | FrontEnd Developer</p>
+        <p>With expertise in cutting-edge technologies such as Vue, JavaScript, VueX, Firebase, and MongoDB...!</p>
+      </div>
+    </section>
+  </body>
+
+  <script>
+
+    function toggleMenu() {
+      const menu = document.getElementById("mobile-nav");
+
+      if (menu.classList.contains("hidden")) {
+        menu.classList.remove("hidden");
+        setTimeout(() => {
+          menu.classList.remove("-translate-x-full");
+        }, 10);
+      } else {
+        menu.classList.add("-translate-x-full");
+        setTimeout(() => {
+          menu.classList.add("hidden");
+        }, 300);
+      }
+    }
+
+
+    window.onscroll = function () {
+            const navbar = document.getElementById("navbar");
+            if (window.scrollY > 10) {
+                navbar.classList.add("shadow-lg");
+            } else {
+                navbar.classList.remove("shadow-lg");
+            }
+        };
+  </script>
 </html>
