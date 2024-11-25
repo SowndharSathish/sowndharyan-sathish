@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <title>Document</title>
     <link href="./src/output.css" rel="stylesheet" />
   </head>
-  <body>
+  <body class="font-roboto">
     <!-- NavBar Section -->
     <section class="fixed top-0 left-0 w-full z-50 bg-gray-100" id="navbar">
       <div
@@ -24,7 +25,7 @@
           <p
             class="hover:text-sky-500 hover:bg-slate-200 hover:rounded-md cursor-pointer px-4 py-2"
           >
-            About
+            <a href="#About">About</a>
           </p>
           <p
             class="hover:text-sky-500 hover:bg-slate-200 hover:rounded-md cursor-pointer px-4 py-2"
@@ -158,7 +159,7 @@
             target="_blank"
               ><img
                 src="./assets/linkedin.png"
-                class="rounded-full h-12 w-12 bg-slate-100 hover:bg-slate-300 p-1 animate-slide-in-bottom"
+                class="rounded-full h-12 w-12 bg-slate-100 hover:bg-slate-300 p-1 animate-slide-in-top"
                 alt=""
             /></a>
           </button>
@@ -193,6 +194,40 @@
         />
       </div>
     </section>
+
+    <!-- About Section -->
+     <section class="bg-slate-100 p-20" id="About">
+     <div class="mx-auto container flex flex-col justify-center items-center px-4">
+      <h1 class="text-3xl font-bold text-gray-800 mb-2">About Me</h1>
+      <h2>Passionate about creating innovative solutions and exploring new technologies</h2>
+      <div class="w-24 h-1 bg-sky-500 mx-auto mt-4"></div>
+      <div class="flex flex-col sm:flex-row gap-8 mx-auto mt-12">
+       <div class="flex flex-col gap-y-2 p-6 bg-white rounded-lg shadow-lg animate-slide-in-left">
+         <div class="bg-sky-200 w-10 rounded-lg">
+           <img src="./assets/email.png" class="h-10 w-10 object-contain" alt="">
+         </div>
+         <h1 class="text-xl font-semibold">Who I Am</h1>
+         <p class="">Dedicated Software Engineer with nearly 1 year of experience in building responsive interfaces. Passionate about translating complex problems into seamless digital solutions. Driven to stay at the forefront of emerging technologies and continuously refine technical skills.</p>
+       </div>
+ 
+       <div class="flex flex-col gap-y-2 p-6 bg-white rounded-lg shadow-lg animate-slide-in-top">
+         <div class="bg-sky-200 w-10 rounded-lg">
+           <img src="./assets/email.png" class="h-10 w-10 object-contain" alt="">
+         </div>
+         <h1 class="text-xl font-semibold">What I Do</h1>
+         <p class="">Develop interactive, high-performance front-end applications using Vue.js and modern web technologies. Specialize in creating seamless user experiences. Focus on delivering reliable, scalable, and efficient solutions tailored to meet diverse client needs, with an emphasis on front-end development and enhancing user engagement.</p>
+       </div>
+ 
+       <div class="flex flex-col gap-y-2 p-6 bg-white rounded-lg shadow-lg animate-slide-in-right">
+         <div class="bg-sky-200 w-10 rounded-lg">
+           <img src="./assets/email.png" class="h-10 w-10 object-contain" alt="">
+         </div>
+         <h1 class="text-xl font-semibold">How I Work</h1>
+         <p class="">Focus on clean code, testing, and debugging to deliver efficient solutions while collaborating effectively with teams. Emphasize proactive problem-solving and open communication to align with project goals. Strive to improve code quality and maintainability through thoughtful documentation and peer reviews.</p>
+       </div>
+      </div>
+     </div>
+     </section>
   </body>
 
   <script>
@@ -283,5 +318,9 @@
         border-color: transparent;
       }
     }
+
+    html {
+  scroll-behavior: smooth;
+}
   </style>
 </html>
