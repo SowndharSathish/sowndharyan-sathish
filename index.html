@@ -117,31 +117,70 @@
 
     <!-- Hero Section -->
     <section
-      class="h-full py-20 max-w-7xl mx-auto pt-20 text-sky-950 z-100 flex flex-col sm:flex-row justify-center items-start gap-x-2 gap-12 b"
+      class="h-full py-20 max-w-7xl mx-auto pt-20 text-sky-950 z-100 flex flex-col sm:flex-row justify-center items-start gap-x-2 gap-12 b p-5"
     >
       <div class="flex flex-col gap-y-4 w-full">
         <div class="w-full flex justify-start">
           <img
             src="assets/HeroImage.png"
-            class="w-40 h-40 object-contain rounded-full bg-[#0ea5e9] border-black border-4 justify-end items-end flex"
+            class="w-40 h-40 object-contain rounded-full bg-[#0ea5e9] border-black border-4 justify-end items-end flex animate-slide-in-left"
             alt=""
           />
         </div>
         <h1
-          class="text-4xl lg:text-5xl font-bold mt-8 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600"
+          class="text-4xl lg:text-5xl font-bold mt-8 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 animate-slide-in-right"
         >
           Sowndharyan Sathish
         </h1>
-        <h2 class="text-xl lg:text-2xl text-gray-600 mt-4">
+        <h2 class="text-xl lg:text-2xl text-gray-600 mt-4 animate-slide-in-top">
           Software Engineer | FrontEnd Developer
         </h2>
         <h3
-          class="text-base sm:text-sm md:text-md lg:text-lg text-gray-600 mt-4"
+          class="text-base sm:text-sm md:text-md lg:text-lg text-gray-600 mt-4 animate-slide-in-left"
         >
           With expertise in cutting-edge technologies such as Vue, JavaScript,
           VueX, Firebase and Linux. I deliver web solutions that are
-          <span class="text-blue-600 " id="writing"></span>
+          <span class="text-blue-600" id="writing"></span>
         </h3>
+
+        <div class="flex gap-x-3">
+          <button>
+            <a href="https://github.com/SowndharSathish"
+            target="_blank"
+              ><img
+                src="./assets/github.png"
+                class="rounded-full h-12 w-12 bg-slate-100 hover:bg-slate-300 p-1 animate-slide-in-left"
+                alt=""
+            /></a>
+          </button>
+          <button>
+            <a href="https://www.linkedin.com/in/sowndharyan-sathish-627023220/"
+            target="_blank"
+              ><img
+                src="./assets/linkedin.png"
+                class="rounded-full h-12 w-12 bg-slate-100 hover:bg-slate-300 p-1 animate-slide-in-bottom"
+                alt=""
+            /></a>
+          </button>
+          <button>
+            <a href="mailto:sowndharesathish2001@gmail.com"
+            target="_blank"
+              ><img
+                src="./assets/email.png"
+                class="rounded-full h-12 w-12 bg-slate-100 hover:bg-slate-300 p-1 animate-slide-in-right"
+                alt=""
+            /></a>
+          </button>
+          <button>
+            <a href=""
+            target="_blank"
+              ><img
+                src="./assets/resume.png"
+                class="rounded-full h-12 w-12 bg-slate-100 hover:bg-slate-300 p-1 animate-slide-in-left"
+                alt=""
+            /></a>
+          </button>
+        </div>
       </div>
       <div class="relative w-full aspect-square max-w-lg mx-auto">
         <div
@@ -150,7 +189,7 @@
         <img
           src="/assets/HeroImage.png"
           alt="Developer workspace"
-          class="rounded-3xl object-cover transform scale-x-[-1]"
+          class="rounded-3xl object-cover transform scale-x-[-1] animate-slide-in-right"
         />
       </div>
     </section>
@@ -182,13 +221,12 @@
       }
     };
 
-
     const texts = [
       "highly efficient.",
       "scalable.",
       "secure.",
       "innovative.",
-      "user-friendly."
+      "user-friendly.",
     ];
 
     let textIndex = 0;
@@ -219,31 +257,31 @@
     typeText();
   </script>
 
-<style>
-  .typing {
-    font-family: 'Courier New', Courier, monospace;
-    display: inline-block;
-    color: #4A4A4A;
-    border-right: 3px solid #333;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-    animation: typing 5s steps(30) 1s forwards, blink 0.75s step-end infinite;
-  }
-
-  @keyframes typing {
-    0% {
+  <style>
+    .typing {
+      font-family: "Courier New", Courier, monospace;
+      display: inline-block;
+      color: #4a4a4a;
+      border-right: 3px solid #333;
+      white-space: nowrap;
+      overflow: hidden;
       width: 0;
+      animation: typing 5s steps(30) 1s forwards, blink 0.75s step-end infinite;
     }
-    100% {
-      width: 100%;
-    }
-  }
 
-  @keyframes blink {
-    50% {
-      border-color: transparent;
+    @keyframes typing {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 100%;
+      }
     }
-  }
-</style>
+
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+  </style>
 </html>
